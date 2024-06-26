@@ -3,42 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Name via Email</title>
+    <title>Main Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        /* Additional Styles for Menu */
+        .menu {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-align: left;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .menu-icon, .close-button {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+
+        .search-bar-container {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .search-bar-container input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            max-width: 100%;
+        }
+
+        .search-bar-container button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-bar-container button:hover {
+            background-color: #45a049;
+        }
+
+        .search-bar-container p {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter Your Name</h1>
-    <form id="nameForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <button type="submit">Submit</button>
-    </form>
+    <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()">Menu</div>
+    </header>
+    <div id="menu" class="menu">
+        <a href="home.html" class="menu-button">Home</a>
+        <a href="about.html" class="menu-button">About</a>
+        <a href="services.html" class="menu-button">Services</a>
+        <a href="contact.html" class="menu-button">Contact</a>
+        <a href="javascript:void(0);" class="close-button" onclick="toggleMenu()">Close</a>
+    </div>
+
+    <div>
+        <img src="./img 1.jpg" alt="">
+    </div>
+
+    <div class="search-bar-container">
+        <input type="text" id="visaNumber" placeholder="TYPE YOUR VISA APPLICATION NUMBER">
+        <button onclick="checkVisaNumber()">Submit</button>
+        <p id="error-message" style="color: red; display: none;">You have entered a wrong number! Kindly recheck and try again!</p>
+    </div>
 
     <script>
-        document.getElementById('nameForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
 
-            const name = document.getElementById('name').value;
-
-            fetch('/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name: name })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('SUCCESS! Name sent to email.');
-                } else {
-                    alert('FAILED... Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('FAILED... Please try again.');
-            });
-        });
+        function checkVisaNumber() {
+            var visaNumber = document.getElementById('visaNumber').value;
+            if (visaNumber === '12345678') {
+                window.location.href = 'visa-status.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
     </script>
 </body>
 </html>
+
