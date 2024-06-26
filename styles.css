@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu {
+    display: none;
+    background-color: orange;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    width: 200px;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.menu-button {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.menu-button:hover {
+    background-color: darkorange;
+}
+
+.close-button {
+    cursor: pointer;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.search-bar-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.search-bar-container input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-bar-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .menu-icon {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 50px;
+    }
+
+    .menu-button {
+        padding: 15px;
+        font-size: larger;
+    }
+}
+

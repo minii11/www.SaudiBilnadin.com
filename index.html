@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()">Menu</div>
+    </header>
+    <div id="menu" class="menu">
+        <a href="home.html" class="menu-button">Home</a>
+        <a href="about.html" class="menu-button">About</a>
+        <a href="services.html" class="menu-button">Services</a>
+        <a href="contact.html" class="menu-button">Contact</a>
+        <a href="javascript:void(0);" class="close-button" onclick="toggleMenu()">Close</a>
+    </div>
+
+    <div>
+        <img src="./img 1.jpg" alt="">
+                                    </div>
+                           
+
+    <div class="search-bar-container">
+        <input type="text" id="visaNumber" placeholder="TYPE YOUR VISA APPLICATION NUMBER">
+        <button onclick="checkVisaNumber()">Submit</button>
+        <p id="error-message" style="color: red; display: none;">You have entered a wrong number! Kindly recheck and try again!</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function checkVisaNumber() {
+            var visaNumber = document.getElementById('visaNumber').value;
+            if (visaNumber === '12345678') {
+                window.location.href = 'visa-status.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
