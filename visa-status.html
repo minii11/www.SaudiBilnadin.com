@@ -12,7 +12,7 @@
         }
         .container {
             padding: 20px;
-            text-align: center;
+            text-align: center; /* Center-align the content inside .container */
         }
         h1 {
             color: #333;
@@ -23,17 +23,18 @@
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center; /* Center-align the items inside .gallery */
         }
         .gallery div {
             margin: 10px;
         }
         .gallery img {
             height: auto;
+            display: block; /* Ensures the image behaves as a block element */
+            margin: 0 auto; /* Center-align the image horizontally */
         }
         #img50 {
-            width: 250%; /* Adjust this value as needed */
-            height: auto; /* Maintains the aspect ratio */
+            width: 350%; /* Adjust this value as needed */
         }
     </style>
 </head>
@@ -49,5 +50,3 @@
     </div>
 </body>
 </html>
-
-
