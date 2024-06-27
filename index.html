@@ -32,7 +32,7 @@
     <div class="search-bar-container">
         <input type="text" id="visaNumber" placeholder="TYPE YOUR VISA APPLICATION NUMBER">
         <button onclick="checkVisaNumber()">Submit</button>
-        <p id="error-message" style="color: red; display: none;">You have entered a wrong number! Kindly recheck and try again!</p>
+        <p id="error-message" style="color: red; display: none;"> Not Valid !You have entered a wrong Passport number! Kindly recheck and try again!</p>
     </div>
 
     <script>
@@ -43,7 +43,7 @@
 
         function checkVisaNumber() {
             var visaNumber = document.getElementById('visaNumber').value;
-            if (visaNumber === '12345678') {
+            if (visaNumber === 'Z5363533') {
                 window.location.href = 'visa-status.html';
             } else {
                 document.getElementById('error-message').style.display = 'block';
