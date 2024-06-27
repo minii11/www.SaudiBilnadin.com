@@ -17,15 +17,10 @@
             background-color: #000;
         }
         img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 90%; /* Adjust width to make the image smaller */
-            height: auto; /* Maintain aspect ratio */
-            max-height: 80%; /* Ensure it doesn't exceed 80% of viewport height */
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-            z-index: 1; /* Ensure image is in front of background */
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -38,4 +33,3 @@
     </script>
 </body>
 </html>
-
