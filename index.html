@@ -23,54 +23,53 @@
             text-align: right;
         }
  .menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%; /* Set width to 100% */
-        max-height: 100%; /* Prevent overflow */
-        padding: 15px;
-        background-color: black;
-        color: white;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        overflow-y: auto; /* Enable scrolling if content overflows */
-        display: flex; /* Use flexbox */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text */
-    }
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%; /* Cover full height */
+            background-color: black;
+            color: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            overflow-y: auto;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-top: 50px; /* Add space for menu items */
+        }
 
-    .menu.visible {
-        display: flex; /* Ensure it's displayed as flex when visible */
-        opacity: 1;
-    }
+        .menu.visible {
+            display: flex; /* Show menu when visible */
+            opacity: 1;
+        }
 
-    .menu-button {
-        display: block;
-        color: white;
-        text-decoration: none;
-        margin: 10px 0;
-        padding: 10px;
-        border: 2px solid white; /* White outline */
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-        width: 100%; /* Make buttons full width */
-        max-width: 200px; /* Limit max width for better appearance */
-    }
+        .menu-button {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 200px;
+        }
 
-    .menu-button:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+        .menu-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
 
-    .close-button {
-        margin-top: 20px;
-        color: white;
-        cursor: pointer;
-        font-weight: bold;
-    }
+        .close-button {
+            margin-top: 20px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
 
     img {
         width: 100%;
@@ -142,8 +141,8 @@
 </style>
 </head>
 <body>
-    <header class="header">
-        <div class="menu-icon" onclick="toggleMenu()">Menu</div>
+   <header class="header">
+        <div class="menu-icon" onclick="toggleMenu()" style="cursor: pointer;">Menu</div>
     </header>
     <div id="menu" class="menu">
         <a href="home.html" class="menu-button">Home</a>
@@ -200,7 +199,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/airplane-take-off.png" style="margin-right: 10px;" alt="Airplane Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/airplane-take-off.png" style="margin-right: 10px;" alt="Airplane Icon"/>
                 Visit the Visa Status Page
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">Navigate to the visa status checking page on our website.</p>
@@ -208,7 +207,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/search.png" style="margin-right: 10px;" alt="Search Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/search.png" style="margin-right: 10px;" alt="Search Icon"/>
                 Enter Your Visa Application Number
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">In the designated field, enter your Visa Application Number. This unique identifier is essential for tracking your application status.</p>
@@ -216,7 +215,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/checkmark.png" style="margin-right: 10px;" alt="Check Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/checkmark.png" style="margin-right: 10px;" alt="Check Icon"/>
                 Submit Your Request
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">Click the "Check Status" button to submit your request. The system will retrieve your visa application status.</p>
@@ -224,7 +223,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/visible.png" style="margin-right: 10px;" alt="Visibility Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/visible.png" style="margin-right: 10px;" alt="Visibility Icon"/>
                 View Your Status
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">Your current visa status will be displayed on the screen. Possible statuses include "In Process," "Approved," or "Rejected."</p>
@@ -232,7 +231,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/help.png" style="margin-right: 10px;" alt="Help Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/help.png" style="margin-right: 10px;" alt="Help Icon"/>
                 What to Do If You Cannot Find Your Visa Status
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">
@@ -244,7 +243,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/document.png" style="margin-right: 10px;" alt="Document Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/document.png" style="margin-right: 10px;" alt="Document Icon"/>
                 If Your Visa Is Approved
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">
@@ -255,7 +254,7 @@
 
         <div style="background: rgba(50, 50, 50, 0.8); padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2); width: 100%; max-width: 500px; box-sizing: border-box;">
             <div style="display: flex; align-items: center; color: white; font-size: 1.2em;">
-                <img src="https://img.icons8.com/ios-filled/16/ffffff/info.png" style="margin-right: 10px;" alt="Info Icon"/>
+                <img src="https://img.icons8.com/ios-filled/12/ffffff/info.png" style="margin-right: 10px;" alt="Info Icon"/>
                 Additional Information
             </div>
             <p style="color: #ddd; font-size: 0.9em; line-height: 1.5;">
@@ -493,25 +492,20 @@
 </footer>
 
     <script>
-         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('visible');
-        }
         function toggleMenu() {
-            var menu = document.getElementById('menu');
+            const menu = document.getElementById('menu');
             if (menu.classList.contains('visible')) {
                 menu.classList.remove('visible');
                 setTimeout(() => {
-                    menu.style.display = 'none';
+                    menu.style.display = 'none'; // Hide menu after fade out
                 }, 500); // Wait for the transition to finish
             } else {
-                menu.style.display = 'block';
+                menu.style.display = 'flex'; // Show menu instantly
                 setTimeout(() => {
                     menu.classList.add('visible');
                 }, 10); // Allow display to take effect
             }
         }
-
         function checkVisaNumber() {
             var visaNumber = document.getElementById('visaNumber').value;
             if (visaNumber === 'Y2219245') {
